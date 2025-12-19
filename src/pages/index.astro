@@ -6,6 +6,7 @@ import Steps from '../components/Steps.astro';
 import Newsletter from '../components/Newsletter.astro';
 import Footer from "../components/Footer.astro";
 import Testimonials from "../components/Testimonials.astro";
+import FAQ from "../components/FAQ.astro";
 ---
 
 <html lang="de">
@@ -28,7 +29,11 @@ import Testimonials from "../components/Testimonials.astro";
 
 	<Testimonials />
 
-	<Wave topColor="#4d96ff1a" fillColor="#FFF9F0" flip={true} variant={3} />
+	<Wave topColor="#4d96ff1a" fillColor="#ffffff" flip={true} variant={3} />
+
+	<FAQ />
+
+	<Wave topColor="#FFF9F0" fillColor="#ffffff" flip={false} variant={2} />
 
 	<Newsletter />
 </main>

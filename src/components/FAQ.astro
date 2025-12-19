@@ -1,0 +1,48 @@
+---
+const faqs = [
+    {
+        question: "Ist die App wirklich sicher für mein Kind?",
+        answer: "Ja! Alle Rezepte sind speziell für Kinder entwickelt. Aufgaben, die Hitze oder scharfe Messer erfordern, sind deutlich mit einem 'Eltern-Symbol' markiert."
+    },
+    {
+        question: "Ist die App werbefrei?",
+        answer: "Absolut. Wir garantieren eine 100% werbefreie Umgebung, damit dein Kind sich voll und ganz auf das Kochen konzentrieren kann."
+    },
+    {
+        question: "Ab welchem Alter ist die App geeignet?",
+        answer: "Die App ist für Kinder von 6 bis 16 Jahren konzipiert. Die Kleinen kochen mit Hilfe, die Großen werden zu echten Profi-Chefs!"
+    }
+];
+---
+
+<section class="py-20 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-12 text-kid-text">Häufige Fragen 💡</h2>
+
+        <div class="space-y-4">
+            {faqs.map((faq) => (
+                    <details class="group border-2 border-cup-blue-tint rounded-2xl bg-cup-blue-tint/10 open:bg-white transition-all duration-300">
+                        <summary class="list-none p-6 cursor-pointer flex justify-between items-center font-bold text-lg md:text-xl text-kid-text">
+                            {faq.question}
+                            <span class="text-cup-blue transition-transform duration-300 group-open:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            {faq.answer}
+                        </div>
+                    </details>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Entfernt den Standard-Pfeil in Chrome/Safari/Firefox */
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    summary {
+        display: flex;
+    }
+</style>
